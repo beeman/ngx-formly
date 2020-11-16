@@ -10,6 +10,7 @@ there are prebuilt templates you can use:
   - Ionic
   - Kendo
   - PrimeNG
+  - Tailwind
 
 
 ## Creating a Custom Template

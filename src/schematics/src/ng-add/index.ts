@@ -90,6 +90,7 @@ function mapUIName(uiTheme: string): string {
     nativescript: 'Nativescript',
     ionic: 'Ionic',
     primeng: 'PrimeNG',
+    tailwind: 'Tailwind',
     kendo: 'Kendo',
     'ng-zorro-antd': 'NgZorroAntd',
   };

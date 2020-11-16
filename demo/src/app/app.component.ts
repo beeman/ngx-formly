@@ -31,6 +31,7 @@ export class AppComponent {
         { path: '/ui/material', title: 'Material' },
         { path: '/ui/ionic', title: 'Ionic' },
         { path: '/ui/primeng', title: 'PrimeNG' },
+        { path: '/ui/tailwind', title: 'Tailwind' },
         { path: '/ui/kendo', title: 'Kendo' },
         { path: '/ui/ng-zorro-antd', title: 'Ng-Zorro-Antd' },
       ],

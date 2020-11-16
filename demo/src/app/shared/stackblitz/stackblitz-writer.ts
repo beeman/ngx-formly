@@ -33,6 +33,16 @@ const TEMPLATE_FILES: { [id: string]: ExampleType['files'] } = {
       },
     },
   ],
+  tailwind: [
+    {
+      file: 'styles.scss',
+      filecontent: {
+        default: `
+        @import '~tailwindcss/dist/tailwind.min.css';
+      `,
+      },
+    },
+  ],
   ionic: [
     {
       file: 'styles.scss',
@@ -105,6 +115,10 @@ const dependencies = {
     '@ngx-formly/primeng': formlyVersion,
     primeng: '^7.0.5',
   },
+  tailwind: {
+    '@ngx-formly/tailwind': formlyVersion,
+    tailwindcss: '^1.9.0',
+  },
   ionic: {
     '@ngx-formly/ionic': formlyVersion,
     '@ionic/angular': '4.0.0-beta.7', // workaround for https://github.com/ionic-team/ionic/issues/16354
@@ -139,6 +153,7 @@ const ngModule = {
   material: 'FormlyMaterialModule',
   kendo: 'FormlyKendoModule',
   primeng: 'FormlyPrimeNGModule',
+  tailwind: 'FormlyTailwindModule',
   ionic: 'FormlyIonicModule',
   'ng-zorro-antd': 'FormlyNgZorroAntdModule',
 };
@@ -181,7 +196,9 @@ export class StackblitzWriter {
 
     const options: any = { type };
 
-    if (['bootstrap', 'material', 'kendo', 'ionic', 'primeng', 'ng-zorro-antd'].indexOf(options.type) === -1) {
+    if (
+      ['bootstrap', 'material', 'kendo', 'ionic', 'primeng', 'tailwind', 'ng-zorro-antd'].indexOf(options.type) === -1
+    ) {
       if (appModuleContent.indexOf('@ngx-formly/bootstrap') !== -1) {
         options.type = 'bootstrap';
       } else if (appModuleContent.indexOf('@ngx-formly/material') !== -1) {
@@ -192,6 +209,8 @@ export class StackblitzWriter {
         options.type = 'ionic';
       } else if (appModuleContent.indexOf('@ngx-formly/primeng') !== -1) {
         options.type = 'primeng';
+      } else if (appModuleContent.indexOf('@ngx-formly/tailwind') !== -1) {
+        options.type = 'tailwind';
       } else if (appModuleContent.indexOf('@ngx-formly/ng-zorro-antd') !== -1) {
         options.type = 'ng-zorro-antd';
       }

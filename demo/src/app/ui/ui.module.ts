@@ -14,6 +14,7 @@ import { SharedModule } from '../shared';
           { path: 'material', loadChildren: () => import('./ui-material/config.module').then((m) => m.ConfigModule) },
           { path: 'ionic', loadChildren: () => import('./ui-ionic/config.module').then((m) => m.ConfigModule) },
           { path: 'primeng', loadChildren: () => import('./ui-primeng/config.module').then((m) => m.ConfigModule) },
+          { path: 'tailwind', loadChildren: () => import('./ui-tailwind/config.module').then((m) => m.ConfigModule) },
           { path: 'kendo', loadChildren: () => import('./ui-kendo/config.module').then((m) => m.ConfigModule) },
           {
             path: 'ng-zorro-antd',

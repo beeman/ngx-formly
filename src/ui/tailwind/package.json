@@ -1,0 +1,9 @@
+{
+  "name": "@ngx-formly/tailwind",
+  "version": "0.0.0-FORMLY-VERSION",
+  "license": "MIT",
+  "peerDependencies": {
+    "@ngx-formly/core": "0.0.0-FORMLY-VERSION",
+    "tailwind": ">=9.0.0"
+  }
+}
